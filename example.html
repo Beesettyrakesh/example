@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EdainFront Solutions</title>
+        <style>
+            body{
+                overflow: auto;
+                margin: 0px;
+                padding: 0px;
+            }
+            #bckgrnd{
+                width: 100%;
+                height: 170px;
+                position: relative;
+                margin-left: 0px;
+                left: 0;
+                top: 0;
+            }
+            .personImg{
+                height: 110px;
+                width: 150px;
+                position: absolute;
+                top: 120px;
+                bottom: 50%;
+                left: 44%;
+            }
+            .name{
+                position: absolute;
+                top: 40px;
+                left: 1px;
+                color: white;
+                font-weight: bolder;
+            }
+            .designation{
+                position: absolute;
+                top: 220px;
+                left: 537px;
+                color: slategray;
+            }
+            .abt{
+                font-weight: normal;
+                font-size: 23px;
+                font-family: 'Courier New', Courier, monospace;
+                position: relative;
+                top: 80px;
+                margin: 10px;
+            }
+            .abtDiv{
+                background-image: linear-gradient(90deg , rgb(238, 238, 238) 98%, rgb(105, 105, 105));
+                width: 100%;
+                height: 90px;
+                border-style: none;
+                position: relative;
+                top: 87px;
+                left: 0px;
+            }
+            .innerAbt{
+                position: absolute;
+                top: 1px;
+                left: 4px;
+                border: 1px solid black;
+                height: 87px;
+                width: 98%;
+                border-left-width: 5px;
+                border-right-width: 5px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-color: white;
+            }
+            .para{
+                margin: 10px;
+                overflow: hidden;
+                font-weight: 700;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #more{
+                text-decoration: none;
+                color: deepskyblue;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: 'Courier New', Courier, monospace;
+                position: absolute;
+                left: 85%;
+                top: 69%;
+            }
+            #drpMore{
+                display: none;
+            }
+            .pst{
+                font-weight: normal;
+                font-size: 23px;
+                font-family: 'Courier New', Courier, monospace;
+                position: relative;
+                top: 97px;
+                margin: 10px;
+            }
+            .pstDiv{
+                background-image: linear-gradient(90deg , rgb(238, 238, 238) 98%, rgb(105, 105, 105));
+                width: 100%;
+                height: 110px;
+                margin-bottom: 10px;
+                border-style: none;
+                position: relative;
+                top: 100px;
+                left: 0px;
+            }
+            .innerPst{
+                position: absolute;
+                top: 1px;
+                left: 4px;
+                border: 1px solid black;
+                height: 107px;
+                width: 98%;
+                border-left-width: 5px;
+                border-right-width: 5px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-color: white;
+            }
+            .pst1{
+                margin: 10px;
+                font-weight: bold;
+                font-size: 16px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .pst2{
+                margin: 10px;
+                font-weight: bold;
+                font-size: 16px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .pstImg1{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top: 10px;
+                left: 790px;
+            }
+            .pstImg2{
+                height: 40px;
+                width: 70px;
+                position: absolute;
+                top: 62px;
+                left: 781px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topDiv">
+            <img id="bckgrnd" src="bck2.jpg">
+            <div class="name">Abhishek Tripathi</div>
+        </div>
+        <div class="innerdDiv">
+            <img class="personImg" src="pic3.jpeg">
+        </div>
+        <h2 class="designation">Professor, Taxation</h2>
+        <h3 class="abt">About</h3>
+        <div class="abtDiv">
+            <div class="innerAbt">
+                <p class="para">Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..
+                    Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..
+                    Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah<span id="dots">..</span><span id="drpMore">
+                    Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah..Blah blah
+                    Blah blah..
+                    </span>
+                </p>
+                <a href="#" id="more" onclick="Expand()">More</a>
+            </div>
+        </div>
+        <h3 class="pst">Posts</h3>
+        <div class="pstDiv">
+            <div class="innerPst">
+                <h2 class="pst1">20 Tips for CA Inter Taxation Preparation</h2>
+                <br/>
+                <h2 class="pst2">Why traditional way of coaching for CA would not work any more</h2>
+                <img class="pstImg1" src="posts1.png">
+                <img class="pstImg2" src="posts2.png">
+            </div>
+        </div>
+
+        <script>
+            function Expand(){
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("drpMore");
+                var clkText = document.getElementById("more");
+
+                if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                more.innerHTML = "More"; 
+                moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    more.innerHTML = "Less"; 
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
+    </body>
